@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css">
+  <title>Звёздные войны</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo-container">
+      <img src="./images/logo.png" alt="" class="header__logo">
+      <p class="header__logo-sub">Звёздные войны</p>
+    </div>
+  </header>
+  <form name="search" class="form form_type_search">
+    <h3 class="form__title">Что искать?</h3>
+    <div class="form__wrapper">
+      <div class="form__select-container">
+        <select name="entity" class="form__select">
+          <option value="people" selected class = 'form__option'>Люди</option>
+          <option value="planets" class = 'form__option'>Планеты</option>
+          <option value="starships" class = 'form__option'>Корабли</option>
+        </select>
+      </div>
+      <input type="number" name="entityId" placeholder="Введите номер" class="form__input form__input_type_entity-id">
+      <button class="form__btn">
+        Поиск
+      </button>
+    </div>
+  </form>
+  <main class="container">
+    <div class="spinner"><i></i></div>
+    <div class="content">
+      <p class="content__result"></p>
+      <p class="content__error"></p>
+    </div>
+  </main>
+  <script src="./scripts/main.js"></script>
+</body>
+</html>
